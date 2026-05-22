@@ -1,36 +1,20 @@
 "use client";
 import Image from "next/image";
-import { useEffect } from "react";
 
 export default function Hero() {
-  useEffect(() => {
-    const handleScroll = () => {
-      document.documentElement.style.setProperty(
-        "--scroll-offset",
-        `${window.scrollY * 0.2}px`,
-      );
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <section className="relative h-[80vh] overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10 bg-gray-900/80"
-        style={{ transform: "translateZ(0)" }}
-      >
+    <section
+      className="relative h-[80vh]"
+      style={{ clipPath: "inset(0)" }}
+    >
+      <div className="fixed inset-0 -z-10 bg-gray-900/80">
         <Image
           src="/hero.jpg"
           alt="Hero"
           fill
           className="object-cover object-[center_20%] opacity-50"
           priority
-          style={{
-            transform: "translateY(var(--scroll-offset, 0px))",
-          }}
         />
-        <div className="absolute inset-0 h-full w-full object-cover opacity-50" />
       </div>
 
       <div className="flex h-full items-end">
@@ -52,7 +36,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Seta animada no centro-baixo */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-white/40">
         <span className="text-xs tracking-widest uppercase">scroll</span>
         <span className="animate-bounce text-lg">↓</span>

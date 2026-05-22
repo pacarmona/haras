@@ -5,6 +5,7 @@ import Awards from "@/sections/Awards";
 import Champions from "@/sections/Champions";
 import Faq from "@/sections/Faq";
 import Cta from "@/sections/Cta";
+import { Carousell } from "@/sections/Carousell";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Awards />
       <Champions />
+      <Carousell />
       <Cta />
       <Faq />
     </main>
