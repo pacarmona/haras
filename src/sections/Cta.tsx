@@ -11,7 +11,7 @@ export default function Cta() {
         </p>
 
         <a
-          href="https://wa.me/5575988349734?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Haras%20Alcançu"
+          href="https://wa.me/5575999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Haras%20Alcançu"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-400 text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors"
